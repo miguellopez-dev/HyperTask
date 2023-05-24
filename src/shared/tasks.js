@@ -14,6 +14,7 @@ export const TASKS = [
         location: 'Home',
         date: new Date().toLocaleDateString('en-US'),
         utility: '',
+        completed: false,
     },
     {
         id: 1,
@@ -23,6 +24,7 @@ export const TASKS = [
         location: 'Home',
         date: new Date().toLocaleDateString('en-US'),
         utility: 'Computer',
+        completed: false,
     },
     {
         id: 2,
@@ -38,5 +40,6 @@ export const TASKS = [
         location: 'Home',
         date: new Date().toLocaleDateString('en-US'),
         utility: 'Phone',
+        completed: true,
     },
 ];
