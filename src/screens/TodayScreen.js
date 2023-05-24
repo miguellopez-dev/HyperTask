@@ -1,14 +1,13 @@
+import { View } from 'react-native';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { FAB } from '@rneui/base';
 import TaskCard from '../components/TaskCard';
-import {
-    SafeAreaProvider,
-    useSafeAreaInsets,
-} from 'react-native-safe-area-context';
 
 const TodayScreen = () => {
     const insets = useSafeAreaInsets();
 
     return (
-        <SafeAreaProvider
+        <View
             style={{
                 paddingTop: insets.top,
                 paddingBottom: insets.bottom,
@@ -17,7 +16,12 @@ const TodayScreen = () => {
             }}
         >
             <TaskCard />
-        </SafeAreaProvider>
+            <FAB
+                icon={{ name: 'add', color: 'white' }}
+                color='green'
+                placement='right'
+            />
+        </View>
     );
 };
 
